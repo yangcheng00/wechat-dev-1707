@@ -62,5 +62,6 @@ Day02-微信小程序
 23. 在 weather.js 中定义这个函数：getWeather，首先在这里获取城市的名称
 24. 先在 weather.js 中定义数据变量 city，初始值为
 null
-25. 在 getCity 中通过 this.setData({}) 为 city 赋值
-26. 在 getWeather 中取得 city 的值
+25. 在 getCity(event) 中通过 this.setData({}) 为 city 赋值：city:event.detail.value
+26. 在 getWeather 中取得 city 的值：this.data.city
+27. 
