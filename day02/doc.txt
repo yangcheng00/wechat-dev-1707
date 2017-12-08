@@ -51,3 +51,16 @@ Day02-微信小程序
 17. 定义函数 changeMessage：this.setData({message: '...'});
 	17.1. this 指代当前页面
 	17.2. setData 设置页面的数据对象
+18. 根据城市名称获取天气信息
+19. 创建页面weather及其关联的文件：weather.js weather.wxml，在 app.json 中注册这个页面
+20. 在 weather.wxml 中添加 input
+21. 在后台 weather.js 中获取 input 中用户输入的城市名称
+	21.1 在 input 中定义属性 binginput="getCity"
+	21.2 在 weather.js 中定义函数 getCity
+	21.3 通过函数的 event 参数获取 input 中用户数的值：event.detail
+22. 添加一个获取天气的按钮 button，绑定点击事件：bindtap="getWeather"
+23. 在 weather.js 中定义这个函数：getWeather，首先在这里获取城市的名称
+24. 先在 weather.js 中定义数据变量 city，初始值为
+null
+25. 在 getCity 中通过 this.setData({}) 为 city 赋值
+26. 在 getWeather 中取得 city 的值

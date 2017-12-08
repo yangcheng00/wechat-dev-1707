@@ -1,3 +1,4 @@
 <text>weather page</text>
 
-<input placeholder='input city name'/>
+<input placeholder='input city name' bindinput='getCity'/>
+<button bindtap='getWeather'>get weather</button>
