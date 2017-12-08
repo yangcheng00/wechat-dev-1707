@@ -2,3 +2,6 @@
 
 <input placeholder='input city name' bindinput='getCity'/>
 <button bindtap='getWeather'>get weather</button>
+<view wx:for="{{data.result}}">
+  {{item}}
+</view>

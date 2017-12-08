@@ -64,4 +64,6 @@ Day02-微信小程序
 null
 25. 在 getCity(event) 中通过 this.setData({}) 为 city 赋值：city:event.detail.value
 26. 在 getWeather 中取得 city 的值：this.data.city
-27. 
+27. 发起一次 web 请求：wx.request(); 
+28. 在页面渲染天气结果：<view wx:for="{{data.result}}"></view>
+29. 练习：完成微信小程序：利用第三方API，实现查询 IP 地址的地理位置
