@@ -8,4 +8,5 @@
     </block>
   </view>
   <navigator open-type='redirect' url='../view/view'>view page</navigator>
+  <navigator open-type='redirect' url='../weather/weather'>weather</navigator>
 </view>
