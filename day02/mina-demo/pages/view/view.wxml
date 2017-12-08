@@ -1,1 +1,2 @@
 <text>{{message}}</text>
+<button type='primary' bindtap='changeMessage'>click</button>

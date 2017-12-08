@@ -41,4 +41,13 @@ Day02-微信小程序
 	10.2 属性 url：跳转地址，值：指向另一个页面的 path-to-some-page/some-page.wxml 页面文件（省略扩展名 wxml）
 	10.3 属性 open-type：打开方式，值 redirect：重定向
 11. app.json 的 pages 中，数组的第一个页面就是项目的首页
-
+12. 数据绑定：修改 veiw/view.wxml 中的 text 的内容，变为变量的形式：<text>{{变量名}}</text>
+13. 修改 view/view.js，定义 Page 函数：Page({});
+14. 指定 view/view.wxml 中的变量对应的数据 data：
+	14.1 定义 data 键值对：data:{}
+	14.2 定义当前的 message 变量（键 key）所对应的值：data{message: 'some-value'}
+15. 修改 view/view.wxml，添加一个按钮 button，添加样式属性 type，值 primary；添加一个事件属性：bindtap，值：事件对应的响应函数名
+16. 定义函数：changeMessage：修改 view/view.js：添加 changeMessage:function(evevt) {//...}
+17. 定义函数 changeMessage：this.setData({message: '...'});
+	17.1. this 指代当前页面
+	17.2. setData 设置页面的数据对象
