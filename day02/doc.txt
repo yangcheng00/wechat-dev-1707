@@ -7,7 +7,7 @@ Day02-微信小程序
 	2.3 进入邮箱，激活小程序开发账号
 	2.4 主体信息登记
 3. 下载小程序编辑器，安装
-4. 创建项目：指定目录 MINA mini-app
+4. 创建项目：点“+”号，指定目录 MINA mini-app
 5. 填写 AppID：开发平台 - 设置 - 开发设置
 6. 示例项目的基本结构（* 为必有项）
 	app.js 小程序逻辑 *
@@ -25,5 +25,20 @@ Day02-微信小程序
 	File - Settings - Editor - File Types
 		1. Cascading Style Sheet + *.wxss
 		2. HTML + *.wxml
-
+8. 新建页面：
+	8.1 创建目录:pages/some-page
+	8.2 创建文件：四个文件都与目录同名
+	8.3 创建目录中必有文件两个：
+		1. some-page.wxml 页面的内容（html）
+		2. some-page.js 页面的逻辑（js）
+	8.4 创建目录中可选文件：
+		1. some-page.wxss 页面的样式（css）
+		2. some-page.json 页面的配置文件
+	8.5 创建完成后，一定要在 app.json 文件的 pages 中注册这个页面： pages/some-page/some-page（省略扩展名 wxml）
+9. text 元素，基本文本标记
+10. 页面跳转：
+	10.1 元素：navigator（类比 a 标记）
+	10.2 属性 url：跳转地址，值：指向另一个页面的 path-to-some-page/some-page.wxml 页面文件（省略扩展名 wxml）
+	10.3 属性 open-type：打开方式，值 redirect：重定向
+11. app.json 的 pages 中，数组的第一个页面就是项目的首页
 
