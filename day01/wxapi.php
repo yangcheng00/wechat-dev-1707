@@ -40,6 +40,7 @@ class wechatCallbackapiTest
                 $fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
                 $keyword = trim($postObj->Content);
+                $event = $postObj->Event;
                 $time = time();
                 $textTpl = "<xml>
 							<ToUserName><![CDATA[%s]]></ToUserName>
@@ -49,11 +50,30 @@ class wechatCallbackapiTest
 							<Content><![CDATA[%s]]></Content>
 							<FuncFlag>0</FuncFlag>
 							</xml>";             
-				if(!empty( $keyword ))
+				if($event == "subscribe")
+        //if(!empty($keyword))
                 {
-              		$msgType = "text";
-                	$contentStr = "Hello, wechat world!";
-                	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                  $tpl = "
+                  <xml>
+<ToUserName><![CDATA[%s]]></ToUserName>
+<FromUserName><![CDATA[%s]]></FromUserName>
+<CreateTime>%s</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>1</ArticleCount>
+<Articles>
+<item>
+<Title><![CDATA[欢迎关注~]]></Title> 
+<Description><![CDATA[全栈开发教程]]></Description>
+<PicUrl><![CDATA[http://pc.yzz.cn/public/images/091028/50_102425_5.jpg]]></PicUrl>
+<Url><![CDATA[http://w3school.com.cn/]]></Url>
+</item>
+</Articles>
+</xml>
+                  ";
+                  // AI
+              		//$msgType = "text";
+                	//$contentStr = "Welcome~";
+                	$resultStr = sprintf($tpl, $fromUsername, $toUsername, $time);
                 	echo $resultStr;
                 }else{
                 	echo "Input something...";
